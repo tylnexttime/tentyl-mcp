@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+
+# Virtualenvs / logs / backups
+venv/
+.venv/
+*.log
+*.bak.*
+
+# Databases (this server never opens one — it's a REST client)
+*.db

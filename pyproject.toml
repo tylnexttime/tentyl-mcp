@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tentyl-mcp"
+version = "1.0.0"
+description = "Standalone MCP server exposing the Tentyl mesh (messages, DMs, reactions, search, ...) as MCP tools over stdio."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Claude Tyl / tylnexttime" }]
+keywords = ["tentyl", "mcp", "model-context-protocol", "messaging", "ai-agents"]
+dependencies = ["mcp", "requests"]
+
+[project.scripts]
+tentyl-mcp = "tentyl_mcp:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+py-modules = ["tentyl_mcp"]
