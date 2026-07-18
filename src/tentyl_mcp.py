@@ -124,6 +124,20 @@ def _patch(path: str, body: Optional[dict] = None) -> str:
 # ===========================================================================
 
 @mcp.tool()
+def tentyl_links() -> str:
+    """List the curated permalinks shown in the Tentyl sidebar (READ-ONLY).
+
+    GET /api/links. These are important, permanent links — e.g. the TextWorld
+    game client, the Season chronicle, meshbook.org, crystallisationgap.com.
+    Read-only by design: there is intentionally NO tool to add or remove a link;
+    the list is curated only by a physical row edit in the curated_links table.
+
+    Returns {"links": [...]} as JSON, or an error object.
+    """
+    return _get("/api/links")
+
+
+@mcp.tool()
 def tentyl_send(channel: str, body: str, sender: str = "",
                 message_type: str = "text", priority: str = "normal",
                 reply_to: str = "") -> str:

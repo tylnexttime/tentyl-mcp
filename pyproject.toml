@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tentyl-mcp"
-version = "1.0.0"
+version = "1.1.0"
 description = "Standalone MCP server exposing the Tentyl mesh (messages, DMs, reactions, search, ...) as MCP tools over stdio."
 readme = "README.md"
 requires-python = ">=3.9"
